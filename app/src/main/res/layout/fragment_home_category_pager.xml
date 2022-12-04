@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:sxd="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/category_pager_parent"
+    tools:context=".ui.fragment.HomeCategoryPagerFragment">
+
+<!--    帮我们添加head和footer，我们设置刷新监听器就行了-->
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/home_category_pager_refresh_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--       自定义的NestedScrollView 主要为了处理滑动事件-->
+
+        <com.sxd.taobaocoupon.ui.custom.MyNestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/looper_and_title"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+
+                        <com.sxd.taobaocoupon.ui.custom.AutoLoopViewPager
+                            android:id="@+id/looper_pager"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/color_primary_bg"
+                            sxd:duration="5000" />
+
+                        <LinearLayout
+                            android:id="@+id/looper_point_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_alignParentBottom="true"
+                            />
+                    </RelativeLayout>
+
+                    <!--    轮播图标题栏-->
+                    <include layout="@layout/include_home_pager_title"
+                        android:id="@+id/home_pager_title"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/home_pager_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+        </com.sxd.taobaocoupon.ui.custom.MyNestedScrollView>
+
+
+        <com.scwang.smart.refresh.footer.BallPulseFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+
+</LinearLayout>

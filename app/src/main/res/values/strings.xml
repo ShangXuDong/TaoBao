@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">你好</string>
+    <string name="title_activity_main">领券</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="text_home">首页</string>
+    <string name="text_selected">精选</string>
+    <string name="text_res_packet">特惠</string>
+    <string name="text_search">搜索</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_home_activity">欢迎~</string>
+    <string name="text_edit_box_hint">搜索宝贝...</string>
+</resources>

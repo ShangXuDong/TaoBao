@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sxd.taobaocoupon">
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+        </intent>
+    </queries>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".ui.BaseApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/icon_ticket"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon_ticket"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TaobaoCoupon"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:exported="true"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.TaobaoCoupon.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".ui.activity.TicketActivity"
+            android:exported="true"
+            android:theme="@style/Theme.TaobaoCoupon.NoActionBar"
+            android:launchMode="singleInstance">
+
+        </activity>
+
+
+        <activity android:name=".ui.activity.ScanQrCodeActivity"
+            android:exported="true"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+
+    </application>
+
+</manifest>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--   这里是flow layout的每一项的布局定义
+        宽高记得设置成wrap_content 不然onMeasure的时候，会很大，导致全部跑到屏幕外面了-->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_flow_text_bg"
+    android:paddingHorizontal="8dp"
+    android:paddingVertical="4dp"
+    android:text="毛衣">
+
+</TextView>

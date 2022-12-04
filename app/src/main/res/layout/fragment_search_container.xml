@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sob="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:sxd="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <!--历史记录-->
+    <LinearLayout
+        android:id="@+id/search_history_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="历史记录"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/search_history_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/delete_icon" />
+        </RelativeLayout>
+
+<!--         sxd:horizontalSpace="10dp"
+            sxd:verticalSpace="10dp"-->
+        <com.sxd.taobaocoupon.ui.custom.TextFlowLayout
+            android:id="@+id/search_history_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+    <!--推荐关键字-->
+    <LinearLayout
+        android:id="@+id/search_recommend_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="热门搜索"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <com.sxd.taobaocoupon.ui.custom.TextFlowLayout
+            android:id="@+id/search_recommend_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            sxd:horizontalSpace="10dp"
+            sxd:verticalSpace="10dp" />
+    </LinearLayout>
+
+    <!--搜索结果-->
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/search_result_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/search_result_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never" />
+
+        <com.scwang.smart.refresh.footer.BallPulseFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+</LinearLayout>
+
