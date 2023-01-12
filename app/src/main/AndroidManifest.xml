@@ -26,6 +26,7 @@
             android:name=".ui.activity.MainActivity"
             android:exported="true"
             android:label="@string/title_activity_main"
+            android:configChanges="screenSize|orientation|keyboardHidden"
             android:theme="@style/Theme.TaobaoCoupon.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,6 +37,7 @@
 
 
         <activity
+            android:configChanges="screenSize|orientation|keyboardHidden"
             android:name=".ui.activity.TicketActivity"
             android:exported="true"
             android:theme="@style/Theme.TaobaoCoupon.NoActionBar"
@@ -45,6 +47,7 @@
 
 
         <activity android:name=".ui.activity.ScanQrCodeActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden"
             android:exported="true"
             android:launchMode="singleInstance">
             <intent-filter>

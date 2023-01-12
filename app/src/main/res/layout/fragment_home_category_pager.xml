@@ -16,7 +16,7 @@
 
         <!--       自定义的NestedScrollView 主要为了处理滑动事件-->
 
-        <com.sxd.taobaocoupon.ui.custom.MyNestedScrollView
+        <com.sxd.taobaocoupon.ui.custom.ShopNestedScrollView
             android:id="@+id/scrollView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -67,7 +67,7 @@
                     android:layout_height="match_parent"/>
 
             </LinearLayout>
-        </com.sxd.taobaocoupon.ui.custom.MyNestedScrollView>
+        </com.sxd.taobaocoupon.ui.custom.ShopNestedScrollView>
 
 
         <com.scwang.smart.refresh.footer.BallPulseFooter

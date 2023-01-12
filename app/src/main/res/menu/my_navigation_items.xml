@@ -9,6 +9,12 @@
 <!--        android:id="@+id/item_selected"-->
 <!--        android:icon="@mipmap/select_normal"-->
 <!--        android:title="@string/text_selected"/>-->
+
+    <item
+        android:id="@+id/item_video"
+        android:icon="@mipmap/select_normal"
+        android:title="视频"/>
+
     <item
         android:id="@+id/item_red_packet"
         android:icon="@mipmap/red_packet_normal"

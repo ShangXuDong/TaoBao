@@ -26,12 +26,11 @@ import com.sxd.taobaocoupon.model.entity.Categories;
 import com.sxd.taobaocoupon.model.entity.CategoryDetail;
 import com.sxd.taobaocoupon.presenter.ICategoryPagerPresenter;
 import com.sxd.taobaocoupon.presenter.impl.CategoryPagerPresenterImpl;
-import com.sxd.taobaocoupon.presenter.impl.TicketPresentImpl;
 import com.sxd.taobaocoupon.ui.activity.TicketActivity;
 import com.sxd.taobaocoupon.ui.adapter.HomeCategoryViewPagerListViewAdapter;
 import com.sxd.taobaocoupon.ui.adapter.LooperAdapter;
 import com.sxd.taobaocoupon.ui.custom.AutoLoopViewPager;
-import com.sxd.taobaocoupon.ui.custom.MyNestedScrollView;
+import com.sxd.taobaocoupon.ui.custom.ShopNestedScrollView;
 import com.sxd.taobaocoupon.util.ConstantsUtils;
 import com.sxd.taobaocoupon.util.SizeUtils;
 import com.sxd.taobaocoupon.view.IHomeCategoryPagerViewCallback;
@@ -61,7 +60,7 @@ public class HomeCategoryPagerFragment extends BaseFragment implements IHomeCate
     LinearLayout pagerParent;
 
     @BindView(R.id.scrollView)
-    MyNestedScrollView nestedScrollView;
+    ShopNestedScrollView nestedScrollView;
 
     @BindView(R.id.looper_and_title)
     LinearLayout looperAndTitle;
@@ -197,7 +196,7 @@ public class HomeCategoryPagerFragment extends BaseFragment implements IHomeCate
             public boolean canLoadMore(View content) {
                 //
 //                if mHomeCategotyViewPagerListAdapter.
-                MyNestedScrollView v = (MyNestedScrollView) content;
+                ShopNestedScrollView v = (ShopNestedScrollView) content;
 
                 RecyclerView recyclerView = (RecyclerView) ((LinearLayout)v.getChildAt(0)).getChildAt(1);
 

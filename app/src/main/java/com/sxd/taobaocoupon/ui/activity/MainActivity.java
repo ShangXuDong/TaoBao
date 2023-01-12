@@ -13,10 +13,12 @@ import com.sxd.taobaocoupon.ui.fragment.DiscountFragment;
 import com.sxd.taobaocoupon.ui.fragment.HomeFragment;
 import com.sxd.taobaocoupon.ui.fragment.SearchFragment;
 import com.sxd.taobaocoupon.ui.fragment.SelectedFragment;
+import com.sxd.taobaocoupon.ui.fragment.VideoFragment;
 
 import java.util.HashMap;
 
 import butterknife.BindView;
+
 
 public class MainActivity extends BaseActivity {
 
@@ -56,6 +58,9 @@ public class MainActivity extends BaseActivity {
                     // hide之前的
                     FragmentTransaction mFragmentTransaction = getSupportFragmentManager().beginTransaction();
                     mFragmentTransaction.hide(fragmentHashMap.get(mNowSelectedItemId));
+                    // 如果是视频Fragment的话 要暂停视频的播放
+                    if (mNowSelectedItemId == R.id.item_video)
+                        ((VideoFragment) fragmentHashMap.get(mNowSelectedItemId)).stopPlay();
                     // 显示现在的
                     if (fragmentHashMap.containsKey(item.getItemId())) {
                         mFragmentTransaction.show(fragmentHashMap.get(item.getItemId()));
@@ -69,6 +74,10 @@ public class MainActivity extends BaseActivity {
 //                            case R.id.item_selected:
 //                                needToAdd = new SelectedFragment();
 //                                break;
+                            // 精选对应界面，变成一个短视频界面
+                            case R.id.item_video:
+                                needToAdd = new VideoFragment();
+                                break;
                             case R.id.item_red_packet:
                                 needToAdd = new DiscountFragment();
                                 break;
@@ -107,5 +116,12 @@ public class MainActivity extends BaseActivity {
         }
 
         mFragmentTransaction.commit();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (mNowSelectedItemId == R.id.item_video)
+            ((VideoFragment) fragmentHashMap.get(mNowSelectedItemId)).stopPlay();
     }
 }

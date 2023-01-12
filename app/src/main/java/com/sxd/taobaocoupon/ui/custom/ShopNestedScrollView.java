@@ -10,21 +10,21 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.widget.NestedScrollView;
 
-public class MyNestedScrollView extends NestedScrollView {
+public class ShopNestedScrollView extends NestedScrollView {
 
     private int mHeaderHeight = 0;
 
     private int originScroll = 0;
 
-    public MyNestedScrollView(@NonNull Context context) {
+    public ShopNestedScrollView(@NonNull Context context) {
         super(context);
     }
 
-    public MyNestedScrollView(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public ShopNestedScrollView(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public MyNestedScrollView(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public ShopNestedScrollView(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 

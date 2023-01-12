@@ -1,17 +1,28 @@
 package com.sxd.taobaocoupon.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.ArrayMap;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.sql.Array;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
+
 public abstract class BaseActivity extends AppCompatActivity {
 
+
     private Unbinder mbind;
+    private static int c;
+    private static int dd;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -24,6 +35,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         initListeners();
         initPresenter();
     }
+
 
     @Override
     protected void onDestroy() {
